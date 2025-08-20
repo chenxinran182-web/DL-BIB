@@ -37,3 +37,26 @@ python train.py --outdir=./training-runs \
 --mirror=1 \
 --resume=/root/stylegan3-main/weight_files/stylegan3-r-afhqv2-512x512.pkl
 ```
+（--outdir: Training output directory
+--cfg: Model Configuration (stylegan3-r)
+--data: Training dataset path
+--gpus: The number of Gpus used
+--batch: Batch size
+--kimg: Training duration (thousand images)
+--gamma: R1 regularized weight
+--batch-gpu: The batch size of each GPU
+--snap: Snapshot saving frequency
+--mirror: Data Augmentation (1 enabled)
+--resume: Pre-trained weight path）
+
+Generation and Visualization
+After the training is completed, use the visualizer.py tool to generate and visualize images:
+```bash
+python visualizer.py --pkl /path/to/your/DL-BBI-000028.pkl
+```
+License
+Based on the NVIDIA StyleGAN3 license, please read the official license terms before use.
+
+Acknowledgments
+StyleGAN3 models provided by NVIDIA Research
+GPU computing power support provided by the AutoDL platform
