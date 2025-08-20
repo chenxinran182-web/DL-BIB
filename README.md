@@ -27,7 +27,7 @@ Training command
 ```bash
 python train.py --outdir=./training-runs \
 --cfg=stylegan3-r \
---data=/root/stylegan3-main/dog512x512.zip \
+--data=/root/stylegan3-main/dataset.zip \
 --gpus=1 \
 --batch=8 \
 --kimg=100 \
@@ -54,6 +54,22 @@ After the training is completed, use the visualizer.py tool to generate and visu
 ```bash
 python visualizer.py --pkl /path/to/your/DL-BBI-000028.pkl
 ```
+
+Calculate the FID value
+After the training is completed, the FID score is calculated using the final generated.PKL file to quantitatively evaluate the quality of the generated images.
+```bash
+cd /path/to/stylegan3-main
+python calc_metrics.py --metrics=fid50k_full \
+                       --data="/path/to/your/dataset.zip" \
+                       --network="./training-runs/network-snapshot-000028.pkl" \
+                       --gpus=1
+```
+
+Results and Demonstration
+This project successfully generated a smooth transition sequence from the initial form of the product to the bionic biological form. Each frame of the image maintains high fidelity and coherent morphological changes, demonstrating the powerful capabilities of StyleGAN3 in cross-domain image generation and morphological innovation.
+
+[Fig13.TIF.TIF](https://github.com/user-attachments/files/21891843/Fig13.TIF.TIF)
+
 License
 Based on the NVIDIA StyleGAN3 license, please read the official license terms before use.
 
