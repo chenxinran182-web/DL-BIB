@@ -1,5 +1,5 @@
 # DL-BIB
-DL-BIB Method: Intelligent Generation of Product Bionic Image Forms via Multimodal Emotion-Weighted Quantification
+Intelligent Generation of Product Bionic Image Forms via Multimodal Emotion-Weighted Quantification
 This project is based on the StyleGAN3 model officially released by NVIDIA and has achieved progressive image fusion and generation. Train on the AutoDL cloud platform using the RTX 4090D GPU to generate images of a specific style by fine-tuning the pre-trained model.
 
 Environmental configuration：
